@@ -43,7 +43,7 @@
                 sum += 30;
                 break;
             default:
-                sum += (Math.random*40);
+                sum += (Math.random()*40);
                 break;
         }
         switch (this.state.q2) {
@@ -60,7 +60,7 @@
                 sum += 30;
                 break;
             default:
-                sum += (Math.random*40);
+                sum += (Math.random()*40);
                 break;
         }
         switch (this.state.q3) {
@@ -77,7 +77,7 @@
                 sum += 30;
                 break;
             default:
-                sum += (Math.random*40);
+                sum += (Math.random()*40);
                 break;
         }
         switch (this.state.q4) {
@@ -94,14 +94,15 @@
                 sum += 30;
                 break;
             default:
-                sum += (Math.random*40);
+                sum += (Math.random()*40);
                 break;
         }
-        
-        if (sum / 4 <= 5 ){
+
+        // console.log(sum);
+        if (sum / 4 <= 7 ){
             this.state.gryffindor.push(this.state.currentStudent);
             this.setState({gryffindor: this.state.gryffindor});
-        } else if (sum / 4 > 5 && sum / 4 <= 18) {
+        } else if (sum / 4 > 7 && sum / 4 <= 18) {
             this.state.slytherin.push(this.state.currentStudent);
             this.setState({slytherin: this.state.slytherin});
         } else if (sum / 4 > 18 && sum / 4 <= 22) {
